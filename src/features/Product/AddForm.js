@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 const AddForm = ({ addProduct }) => {
   const [name, setName] = useState('');
   const [imageURL, setImageURL] = useState('');
   const [type, setType] = useState('');
-
+ 
   const handleSubmit = (event) => {
     event.preventDefault();
     addProduct({ name, type, imageURL });
@@ -15,7 +15,7 @@ const AddForm = ({ addProduct }) => {
   };
 
   return (
-    <div>
+    <Fragment>
       <h1>Add Product</h1>
       <form id="create-form" onSubmit={handleSubmit}>
         <div className="input-group">
@@ -53,7 +53,7 @@ const AddForm = ({ addProduct }) => {
 
         <button type="submit">Add product</button>
       </form>
-    </div>
+    </Fragment>
   );
 };
 

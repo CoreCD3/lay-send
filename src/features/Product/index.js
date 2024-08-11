@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Product = ({ item }) => {
   const productImage = `/assets/${item.imageURL}`;
-
+ 
   return (
     <li className="Products">
       <a href={`/update-product/${item.id}`}>

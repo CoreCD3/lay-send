@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Container from './features/Container';
 import Home from './features/Home';
 import Navbar from './features/Navbar';
 import './index.css';
-
+ 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Container>
-        <Home />
-      </Container>
-    </div>
+    <Fragment>
+    <Navbar />
+    <Container>
+      <Home />
+    </Container>
+  </Fragment>
   );
 }
 
